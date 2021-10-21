@@ -1,38 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+  max-width: 1240px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
+  /* width: 100%; */
+  /* max-width: 1240px; */
   display: flex;
   flex-direction: column;
+}
+
+header {
+  display: flex;
+  margin: 2em 0;
+  align-items: center;
+}
+
+header .logo {
+  width: 210px;
+  height: 68px;
+}
+
+nav {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 2rem;
+}
+
+nav a {
+  color: #ff6060;
+  text-decoration: none;
+}
+nav a:visited {
+  color: #ff6060;
+}
+nav a:hover {
+  color: #ff6060;
+  text-decoration: underline;
+}
+nav a:active {
+  color: #ff79da;
+}
+
+.mainHome {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 25px;
+  width: auto;
+  height: auto;
+  background-color: #f6f6f6;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.appartCard {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  flex: 0 1 auto;
+  position: relative;
+  margin-bottom: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.appartCard:hover {
+  transform: scale(1.02);
+}
+
+.appartCard h2 {
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  height: 209px;
+  color: white;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 2rem;
+}
+
+footer img {
+  width: 122px;
+  height: 39.44px;
+  filter: brightness(0) invert(1);
+  font-weight: 500;
+  font-size: 24px;
+  margin: 2rem 0;
+}
+
+.mainFiche {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  margin: 2rem 0;
+}
+
+.mainFiche .tag {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.mainFiche .tag li {
+  background-color: #ff6060;
+  border-radius: 10px;
+  margin-right: 1rem;
+  font-size: 14px;
+  font-weight: 500;
   color: white;
+  padding: 0.3rem 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.mainFiche h1 {
+  font-weight: 500;
+  font-size: 36px;
+  color: #ff6060;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mainFiche h2 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #ff6060;
+}
+
+.roundedImg {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+.mainFiche .Top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  justify-content: space-between;
+}
+
+.mainFiche .namePhoto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: min-content;
+}
+
+.namePhoto h3 {
+  font-size: 18px;
+  color: #ff6060;
+  font-weight: 500;
+  text-align: right;
+}
+
+.ratings {
+  width: 30px;
+}
+
+.mainFiche .bottom {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.mainApropos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #ff6060;
+  color: #fff;
+  cursor: pointer;
+  height: 52px;
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 2rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  position: relative;
+  font-size: 18px;
+}
+
+.collapsible img {
+  position: absolute;
+  right: 1rem;
+}
+.icon {
+  transition: all 0.3s ease-in-out;
+}
+
+.rotate {
+  transition: all 0.3s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+.active ul {
+  margin: 0;
+  padding: 1rem;
+  display: block;
+  background-color: #f6f6f6;
+  color: #ff6060;
+  list-style: none;
+}
+
+.mainError404 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #ff6060;
+}
+
+.mainError404 h1 {
+  font-weight: 700;
+  font-size: 288px;
+  margin: 0;
+}
+.slider {
+  position: relative;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider .image {
+  width: 100%;
+  height: 415px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  width: 47px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  transform: rotate(-90deg);
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  width: 47px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+  transform: rotate(90deg);
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  header .logo {
+    width: 145px;
+    height: 68px;
   }
-  to {
-    transform: rotate(360deg);
+  header img {
+    width: 210px;
+    height: 68px;
+  }
+  nav {
+    font-size: 12px;
+  }
+  .mainHome {
+    background-color: #fff;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .appartCard {
+    width: 335px;
+    height: 255px;
+  }
+
+  .ratings {
+    width: 15px;
+  }
+  .roundedImg {
+    width: 32px;
+    height: 32px;
+    margin-left: 1rem;
+  }
+  .namePhoto h3 {
+    font-size: 12px;
+    text-align: right;
+  }
+
+  .mainFiche .tag li {
+    font-size: 10px;
+  }
+
+  .mainFiche h1 {
+    font-size: 18px;
+  }
+
+  .mainFiche h2 {
+    font-size: 14px;
+  }
+
+  .mainFiche .Top {
+    flex-direction: column;
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .collapsible {
+    height: 30px;
+    font-size: 13px;
+    line-height: 0;
+  }
+
+  .collapsible img {
+    height: 9px;
+  }
+
+  .active ul {
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+  .mainHome {
+    justify-content: center;
+  }
+
+  .slider .image {
+    width: 335px;
+    height: 255px;
+  }
+  .slide.active {
+    transform: scale(1.04);
+    width: auto;
+  }
+
+  .right-arrow {
+    right: 20px;
+    width: 19.6px;
+    font-size: 3rem;
+  }
+
+  .left-arrow {
+    left: 20px;
+    width: 19.6px;
+    font-size: 3rem;
   }
 }
