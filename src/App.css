@@ -12,6 +12,7 @@ body {
   /* max-width: 1240px; */
   display: flex;
   flex-direction: column;
+  margin: 0 1rem;
 }
 
 header {
@@ -157,6 +158,7 @@ footer img {
   border-radius: 50%;
   width: 64px;
   height: 64px;
+  margin-left: 1rem;
 }
 
 .mainFiche .Top {
@@ -339,7 +341,7 @@ footer img {
   .roundedImg {
     width: 32px;
     height: 32px;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
   .namePhoto h3 {
     font-size: 12px;
