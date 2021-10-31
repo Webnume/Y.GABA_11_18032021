@@ -19,9 +19,6 @@ function App() {
           <Route path="/Apropos" exact>
             <MainAPropos />
           </Route>
-          <Route path="/MainFicheLogement" exact>
-            <MainFicheLogement />
-          </Route>
           <Route path="/MainFicheLogement/:id" component={(props)=> <MainFicheLogement idHouse={props.match.params.id} />} />
           <Route render={() => <Error404 />} />
         </Switch>

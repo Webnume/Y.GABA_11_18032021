@@ -15,30 +15,23 @@ class MainFicheLogement extends Component {
       logement: []
     };
   }
-  async componentWillMount() {
+
+  async componentDidMount() {
     try {
-      this.setState(await getHouse(this.props.idHouse));
+      const data = await getHouse(this.props.idHouse);
+      // console.log(data);
+      this.setState(data);
+      // this.setState({isLoaded: true});
+      
     } catch (error) {
       console.warn("\\\\\\\\",error)
-      this.setState({error : true});
+      this.setState(error);
+      // this.setState({error : true});
     }
   }
 
-  // async componentDidMount() {
-  //   console.log(".......willmount");
-  //   try {
-  //     const data = await getHouse(this.props.idHouse);
-  //     console.log(".........data",data);
-  //     this.setState(data);
-  //   } catch (error) {
-  //     console.warn("\\\\\\\\",error)
-  //     this.setState({error : true});
-  //   }
-  // }
-
   render() {
     const { error, isLoaded, logement } = this.state;
-    console.log("render : state",this.state);
     if (error) {
       return <div>Erreur : {error.message}</div>;
     }
