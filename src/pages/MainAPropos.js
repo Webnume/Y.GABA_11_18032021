@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Banner from "./asset/images/bannerApropos.jpg";
-import Collapse from "./Collapse";
+import Banner from "../asset/images/bannerApropos.jpg";
+import Collapse from "../components/Collapse";
 
 class MainAPropos extends Component {
   render() {

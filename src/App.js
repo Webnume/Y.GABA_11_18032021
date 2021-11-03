@@ -1,11 +1,11 @@
 import "./App.css";
-import Header from "./Header";
-import MainHome from "./MainHome";
-import MainAPropos from "./MainAPropos";
-import MainFicheLogement from "./MainFicheLogement";
-import Footer from "./Footer";
+import Header from "./components/Header";
+import MainHome from "./pages/MainHome";
+import MainAPropos from "./pages/MainAPropos";
+import MainFicheLogement from "./pages/MainFicheLogement";
+import Footer from "./components/Footer";
 import { BrowserRouter, Switch, Route} from "react-router-dom";
-import Error404 from "./Mainerror404";
+import Error404 from "./pages/Mainerror404";
 
 function App() {
   return (

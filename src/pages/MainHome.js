@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Banner from "./asset/images/bannerHome.jpg";
-import AppartCard from "./AppartCard";
-import { getAllData } from "./services/dataManager";
+import Banner from "../asset/images/bannerHome.jpg";
+import AppartCard from "../components/AppartCard";
+import { getAllData } from "../services/dataManager";
 import { Link } from "react-router-dom";
 
 class MainHome extends Component {

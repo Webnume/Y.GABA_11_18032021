@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Star from "./asset/images/star.svg";
-import StarFilled from "./asset/images/star_filled.svg";
+import Star from "../asset/images/star.svg";
+import StarFilled from "../asset/images/star_filled.svg";
 
 class Ratings extends Component {
   render() {

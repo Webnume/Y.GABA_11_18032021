@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Tag from "./Tag";
-import Ratings from "./Ratings";
-import Collapse from "./Collapse";
-import { getHouse } from "./services/dataManager";
-import SliderGallery from "./SliderGallery";
+import Tag from "../components/Tag";
+import Ratings from "../components/Ratings";
+import Collapse from "../components/Collapse";
+import { getHouse } from "../services/dataManager";
+import SliderGallery from "../components/SliderGallery";
 // import {useParams} from "react-router-dom"
 
 class MainFicheLogement extends Component {

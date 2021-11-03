@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import iconCollapse from "./asset/images/iconCollapse.svg";
+import iconCollapse from "../asset/images/iconCollapse.svg";
 
 class Collapse extends Component {
   state = {

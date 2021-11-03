@@ -364,6 +364,15 @@ footer img {
     flex-direction: column;
   }
 
+  .mainError404 h1 {
+    font-weight: 500;
+    font-size: 150px;
+  }
+  .mainError404 h2 {
+    font-weight: 500;
+    font-size: 13px;
+  }
+
   .right {
     display: flex;
     justify-content: space-between;
@@ -411,4 +420,5 @@ footer img {
     width: 19.6px;
     font-size: 3rem;
   }
+
 }
