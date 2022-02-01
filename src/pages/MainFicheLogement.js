@@ -4,6 +4,7 @@ import Ratings from "../components/Ratings";
 import Collapse from "../components/Collapse";
 import { getHouse } from "../services/dataManager";
 import SliderGallery from "../components/SliderGallery";
+import { Redirect } from "react-router-dom";
 // import {useParams} from "react-router-dom"
 
 class MainFicheLogement extends Component {
@@ -33,7 +34,8 @@ class MainFicheLogement extends Component {
   render() {
     const { error, isLoaded, logement } = this.state;
     if (error) {
-      return <div>Erreur : {error.message}</div>;
+      // return <div>Erreur : {error.message}</div>;
+      return <Redirect to="/404" />
     }
     if (!isLoaded) {
       return <div>Chargement…</div>;
