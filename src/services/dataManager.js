@@ -25,14 +25,10 @@ async function getHouse(idHouse){
         isLoaded: true,
         logement
       };
-  // return {
-  //   isLoaded: true,
-  //   logements: "erreur",
-  // };
     }
   }
   catch(err){
-    // console.error(err);
+    console.error(err);
     throw err;
   }
 }

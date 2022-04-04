@@ -328,6 +328,7 @@ footer img {
     background-color: #fff;
     padding: 0;
     margin: 2rem 0;
+    justify-content: center;
   }
   .appartCard {
     width: 335px;
@@ -394,9 +395,6 @@ footer img {
 
   footer {
     font-size: 12px;
-  }
-  .mainHome {
-    justify-content: center;
   }
 
   .slider .image {

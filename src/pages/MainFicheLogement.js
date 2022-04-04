@@ -5,7 +5,6 @@ import Collapse from "../components/Collapse";
 import { getHouse } from "../services/dataManager";
 import SliderGallery from "../components/SliderGallery";
 import { Redirect } from "react-router-dom";
-// import {useParams} from "react-router-dom"
 
 class MainFicheLogement extends Component {
   constructor(props) {
@@ -13,34 +12,28 @@ class MainFicheLogement extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      logement: []
+      logement: [],
     };
   }
 
   async componentDidMount() {
     try {
       const data = await getHouse(this.props.idHouse);
-      // console.log(data);
       this.setState(data);
-      // this.setState({isLoaded: true});
-      
     } catch (error) {
-      console.warn("\\\\\\\\",error)
+      console.warn("\\\\\\\\", error);
       this.setState(error);
-      // this.setState({error : true});
     }
   }
 
   render() {
     const { error, isLoaded, logement } = this.state;
     if (error) {
-      // return <div>Erreur : {error.message}</div>;
-      return <Redirect to="/404" />
+      return <Redirect to="/404" />;
     }
     if (!isLoaded) {
       return <div>Chargement…</div>;
     }
-    // let {id} = useParams();
     return (
       <>
         <SliderGallery logementPictures={logement.pictures} />
@@ -73,7 +66,7 @@ class MainFicheLogement extends Component {
           <section className="bottom">
             <Collapse width="582px" title="Description">
               {logement.description}
-            </Collapse>          
+            </Collapse>
             <Collapse width="582px" title="Équipements" type="list">
               {logement.equipments}
             </Collapse>

@@ -25,9 +25,6 @@ class SliderGallery extends Component {
     });
   };
 
-  //   if (!Array.isArray(SliderData) || SliderData.length <= 0) {
-  //     return null;
-  //   }
   render() {
     return (
       <section className="slider">

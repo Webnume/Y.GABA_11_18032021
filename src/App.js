@@ -5,7 +5,7 @@ import MainAPropos from "./pages/MainAPropos";
 import MainFicheLogement from "./pages/MainFicheLogement";
 import Footer from "./components/Footer";
 import { BrowserRouter, Switch, Route} from "react-router-dom";
-import Error404 from "./pages/Mainerror404";
+import Error404 from "./pages/Error404";
 
 function App() {
   return (
