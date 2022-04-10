@@ -28,13 +28,6 @@ class SliderGallery extends Component {
   render() {
     return (
       <section className="slider" data-testid="slideWrapper">
-        {/* <img
-          src={Arrow}
-          className="right-arrow"
-          alt="next"
-          onClick={this.nextSlide}
-          data-testid="nextSlideArrow"
-        /> */}
         <button
           className="right-arrow"
           onClick={this.nextSlide}
@@ -42,13 +35,6 @@ class SliderGallery extends Component {
         >
           <i className="fa fa-angle-down"></i>
         </button>
-        {/* <img
-          src={Arrow}
-          className="left-arrow"
-          alt="previous"
-          onClick={this.prevSlide}
-          data-testid="prevSlideArrow"
-        /> */}
         <button
           className="left-arrow"
           onClick={this.prevSlide}
