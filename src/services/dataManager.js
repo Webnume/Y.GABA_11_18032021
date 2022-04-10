@@ -1,9 +1,14 @@
 let data = null;
 async function getAllData() {
   try {
-    const res = await fetch("./data/logements.json");
+    const res = await fetch("/data/logements.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
     data = await res.json();
-      console.log("ok3");
+    console.log("ok3");
     return {
       isLoaded: true,
       logements: data,
