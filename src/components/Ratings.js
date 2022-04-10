@@ -6,8 +6,8 @@ class Ratings extends Component {
   render() {
     const ratingsArray = [];
     for (let i = 0; i < 5; i++) {
-      if (i < this.props.ratingValue) ratingsArray.push(<img className="ratings" key={i} src={StarFilled} alt="" />);
-      else ratingsArray.push(<img className="ratings" key={i} src={Star} alt="" />);
+      if (i < this.props.ratingValue) ratingsArray.push(<img className="ratings" key={i} src={StarFilled} alt="starFilled" />);
+      else ratingsArray.push(<img className="ratings" key={i} src={Star} alt="starNotFilled" />);
     }
 
     return ratingsArray;

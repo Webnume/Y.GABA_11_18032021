@@ -238,7 +238,8 @@ footer img {
   overflow: hidden;
   background-color: #f1f1f1;
 }
-.active ul {
+
+.active  {
   margin: 0;
   padding: 1rem;
   display: block;
@@ -278,26 +279,30 @@ footer img {
   position: absolute;
   top: 50%;
   right: 50px;
-  width: 47px;
   font-size: 3rem;
-  color: #000;
+  color: #fff;
   z-index: 10;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   transform: rotate(-90deg);
+  background-color: transparent;
+  border: none;
 }
 
 .left-arrow {
   position: absolute;
   top: 50%;
   left: 50px;
-  width: 47px;
   font-size: 3rem;
-  color: #000;
+  color: #fff;
   z-index: 10;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   transform: rotate(90deg);
+  background-color: transparent;
+  border: none;
 }
 
 .slide {

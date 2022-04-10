@@ -1,8 +1,11 @@
-import { render } from "@testing-library/react";
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom/extend-expect";
 import AppartCard from "./AppartCard";
 
-test('should render Card', () => { 
-  render(<AppartCard><div id="test"></div></AppartCard>)
-  const test = document.querySelector("#test")
-  expect(test).not.toBeNull()
- })
+test("should render Title", () => {
+  render(<AppartCard>Titre de l'appartement</AppartCard>);
+  const title = screen.getByText("Titre de l'appartement");
+  expect(title).toBeInTheDocument();
+});
+

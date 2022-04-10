@@ -27,19 +27,35 @@ class SliderGallery extends Component {
 
   render() {
     return (
-      <section className="slider">
-        <img
+      <section className="slider" data-testid="slideWrapper">
+        {/* <img
           src={Arrow}
           className="right-arrow"
           alt="next"
           onClick={this.nextSlide}
-        />
-        <img
+          data-testid="nextSlideArrow"
+        /> */}
+        <button
+          className="right-arrow"
+          onClick={this.nextSlide}
+          data-testid="nextSlideArrow"
+        >
+          <i className="fa fa-angle-down"></i>
+        </button>
+        {/* <img
           src={Arrow}
           className="left-arrow"
           alt="previous"
           onClick={this.prevSlide}
-        />
+          data-testid="prevSlideArrow"
+        /> */}
+        <button
+          className="left-arrow"
+          onClick={this.prevSlide}
+          data-testid="prevSlideArrow"
+        >
+          <i className="fa fa-angle-down"></i>
+        </button>
         {this.state.SliderData.map((slide, index) => {
           return (
             <div
@@ -49,7 +65,12 @@ class SliderGallery extends Component {
               key={index}
             >
               {index === this.state.current && (
-                <img src={slide} alt="" className="image" />
+                <img
+                  src={slide}
+                  alt=""
+                  className="image"
+                  data-testid="currentSlidePicture"
+                />
               )}
             </div>
           );
