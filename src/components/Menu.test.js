@@ -4,7 +4,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { BrowserRouter } from "react-router-dom";
 import Menu from "./Menu";
 
-test("should render Menu", () => {
+it("should render Menu", () => {
   render(
     <BrowserRouter>
       <Menu />

@@ -4,7 +4,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./Header";
 
-test("should render Header", () => {
+it("should render Header", () => {
   render(
     <BrowserRouter>
       <Header />

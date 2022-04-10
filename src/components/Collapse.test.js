@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Collapse from "./Collapse";
 
-test("should open Collapse on click when close", () => {
+it("should open Collapse on click when close", () => {
   render(<Collapse title="description"></Collapse>);
   const collapsible = screen.getByTestId("collapsible");
   fireEvent.click(collapsible);

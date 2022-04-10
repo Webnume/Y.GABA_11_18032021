@@ -39,7 +39,8 @@ class MainHome extends Component {
             <Link to={`/MainFicheLogement/${logement.id}`} key={logement.id}>
               <AppartCard
                 img={logement.cover}
-                logement={logement} idhouse={logement.id} 
+                logement={logement}
+                idhouse={logement.id}
               >
                 {logement.title}
               </AppartCard>

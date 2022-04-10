@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Arrow from "../asset/images/iconCollapse.svg";
 
 class SliderGallery extends Component {
   state = {

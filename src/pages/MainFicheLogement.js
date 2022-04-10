@@ -19,6 +19,7 @@ class MainFicheLogement extends Component {
   async componentDidMount() {
     try {
       const data = await getHouse(this.props.idHouse);
+      // console.log(data);
       this.setState(data);
     } catch (error) {
       console.warn("\\\\\\\\", error);
