@@ -8,7 +8,6 @@ async function getAllData() {
       },
     });
     data = await res.json();
-    console.log("ok3");
     return {
       isLoaded: true,
       logements: data,
@@ -22,9 +21,7 @@ async function getAllData() {
 async function getHouse(idHouse) {
   try {
     if (data === null) {
-      console.log("ok2");
-      const tmp = await getAllData();
-      console.log(tmp);
+      await getAllData();
     }
     for (const logement of data) {
       if (logement.id === idHouse)
